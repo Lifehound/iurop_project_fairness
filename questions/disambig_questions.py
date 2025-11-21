@@ -24,15 +24,15 @@ MAX_TOKENS = 32768
 # ------------------------------------
 # 2. Load and Explore Dataset
 # ------------------------------------
-print("🔹 Loading BBQ dataset (Physical appearance)...")
-ds = load_dataset("heegyu/bbq", "Physical_appearance", split="test")
+print("🔹 Loading BBQ dataset (Gender_identity)...")
+ds = load_dataset("heegyu/bbq", "Gender_identity", split="test")
 df = pd.DataFrame(ds)
 
 print("Columns available:", df.columns.tolist())
 
 # Filter out ambiguous questions using context_condition
 if "context_condition" in df.columns:
-    df = df[df["context_condition"] == "ambig"]
+    df = df[df["context_condition"] == "disambig"]
 else:
     print("No context_condition column found — using all examples.")
 
