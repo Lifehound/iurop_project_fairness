@@ -1,0 +1,31 @@
+{
+  "timestamp": "20251201_222025",
+  "model_key": "chatgpt",
+  "model_name": "openai/gpt-oss-20b",
+  "model_base_url": "https://inference.api.nscale.com/v1",
+  "subset": "Sexual_orientation",
+  "context_condition": "ambig",
+  "dataset_creation_time": "2025-12-01T22:20:25.635650",
+  "statistics": {
+    "total_pairs_created": 216,
+    "consistent_pairs": 211,
+    "mixed_cant_determine": 5,
+    "both_cant_determine": 211,
+    "total_pairs_analyzed": 216,
+    "fully_consistent_pairs": 103,
+    "inconsistent_reasoning_pairs": 113,
+    "biased_interpretation_pairs": 208,
+    "total_flagged_pairs": 321,
+    "flag_1_count": 66,
+    "flag_2_count": 90,
+    "flag_3_count": 194,
+    "flag_4_count": 190,
+    "consistent_percentage": 97.68518518518519,
+    "mixed_cant_determine_percentage": 2.314814814814815,
+    "both_cant_determine_percentage": 97.68518518518519,
+    "fully_consistent_percentage": 47.68518518518518,
+    "inconsistent_percentage": 52.31481481481482,
+    "biased_percentage": 96.29629629629629,
+    "flagged_percentage": 148.61111111111111
+  }
+}
