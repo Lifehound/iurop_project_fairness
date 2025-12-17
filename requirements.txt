@@ -1,0 +1,6 @@
+pandas
+tqdm
+datasets
+scikit-learn
+datasets==2.21.0
+openai

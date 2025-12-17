@@ -1,0 +1,32 @@
+{
+  "timestamp": "20251216_200538",
+  "model_key": "mistral",
+  "model_name": "mistralai/mixtral-8x22b-instruct-v0.1",
+  "model_base_url": "https://inference.api.nscale.com/v1",
+  "subset": "SES",
+  "context_condition": "ambig",
+  "num_pairs_requested": null,
+  "dataset_creation_time": "2025-12-16T20:05:38.038409",
+  "statistics": {
+    "total_pairs_created": 1488,
+    "consistent_pairs": 1434,
+    "mixed_cant_determine": 53,
+    "both_cant_determine": 1434,
+    "total_pairs_analyzed": 1488,
+    "fully_consistent_pairs": 1103,
+    "inconsistent_reasoning_pairs": 385,
+    "biased_interpretation_pairs": 914,
+    "total_flagged_pairs": 1299,
+    "flag_1_count": 185,
+    "flag_2_count": 380,
+    "flag_3_count": 96,
+    "flag_4_count": 884,
+    "consistent_percentage": 96.37096774193549,
+    "mixed_cant_determine_percentage": 3.5618279569892475,
+    "both_cant_determine_percentage": 96.37096774193549,
+    "fully_consistent_percentage": 74.1263440860215,
+    "inconsistent_percentage": 25.873655913978492,
+    "biased_percentage": 61.424731182795696,
+    "flagged_percentage": 87.29838709677419
+  }
+}

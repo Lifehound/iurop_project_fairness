@@ -1,0 +1,32 @@
+{
+  "timestamp": "20251217_050340",
+  "model_key": "mistral",
+  "model_name": "mistralai/mixtral-8x22b-instruct-v0.1",
+  "model_base_url": "https://inference.api.nscale.com/v1",
+  "subset": "Sexual_orientation",
+  "context_condition": "disambig",
+  "num_pairs_requested": null,
+  "dataset_creation_time": "2025-12-17T05:03:40.157358",
+  "statistics": {
+    "total_pairs_created": 216,
+    "consistent_pairs": 10,
+    "mixed_cant_determine": 19,
+    "both_cant_determine": 187,
+    "total_pairs_analyzed": 216,
+    "fully_consistent_pairs": 140,
+    "inconsistent_reasoning_pairs": 76,
+    "biased_interpretation_pairs": 15,
+    "total_flagged_pairs": 91,
+    "flag_1_count": 56,
+    "flag_2_count": 41,
+    "flag_3_count": 4,
+    "flag_4_count": 13,
+    "consistent_percentage": 4.62962962962963,
+    "mixed_cant_determine_percentage": 8.796296296296296,
+    "both_cant_determine_percentage": 86.57407407407408,
+    "fully_consistent_percentage": 64.81481481481481,
+    "inconsistent_percentage": 35.18518518518518,
+    "biased_percentage": 6.944444444444445,
+    "flagged_percentage": 42.129629629629626
+  }
+}

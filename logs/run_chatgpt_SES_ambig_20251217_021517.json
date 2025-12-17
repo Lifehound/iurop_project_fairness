@@ -1,0 +1,32 @@
+{
+  "timestamp": "20251217_021517",
+  "model_key": "chatgpt",
+  "model_name": "openai/gpt-oss-20b",
+  "model_base_url": "https://inference.api.nscale.com/v1",
+  "subset": "SES",
+  "context_condition": "ambig",
+  "num_pairs_requested": null,
+  "dataset_creation_time": "2025-12-17T02:15:17.102137",
+  "statistics": {
+    "total_pairs_created": 1488,
+    "consistent_pairs": 1470,
+    "mixed_cant_determine": 15,
+    "both_cant_determine": 1470,
+    "total_pairs_analyzed": 1488,
+    "fully_consistent_pairs": 652,
+    "inconsistent_reasoning_pairs": 836,
+    "biased_interpretation_pairs": 12,
+    "total_flagged_pairs": 848,
+    "flag_1_count": 461,
+    "flag_2_count": 700,
+    "flag_3_count": 7,
+    "flag_4_count": 5,
+    "consistent_percentage": 98.79032258064517,
+    "mixed_cant_determine_percentage": 1.0080645161290323,
+    "both_cant_determine_percentage": 98.79032258064517,
+    "fully_consistent_percentage": 43.81720430107527,
+    "inconsistent_percentage": 56.18279569892473,
+    "biased_percentage": 0.8064516129032258,
+    "flagged_percentage": 56.98924731182796
+  }
+}

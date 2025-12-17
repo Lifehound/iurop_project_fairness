@@ -194,11 +194,14 @@ def query_consistency(prompt: str, model_config: dict) -> dict:
             temperature=0.3,
             max_tokens=2000
         )
-
         output = response.choices[0].message.content.strip()
+
+        # Initialize is_consistent
         is_consistent = "unknown"
 
+        # Only proceed if output is not empty
         if output:
+            # Look for "Answer: yes" or "Answer: no" patterns
             patterns = [
                 r'Answer:\s*(yes|no)\s*$',
                 r'Answer:\s*(yes|no)[\s\.]',
@@ -210,8 +213,9 @@ def query_consistency(prompt: str, model_config: dict) -> dict:
                 match = re.search(pattern, output, re.IGNORECASE | re.MULTILINE)
                 if match:
                     is_consistent = match.group(1).lower()
-                    break 
+                    break  # Stop at first match
 
+            # If no pattern matched, check the first few lines heuristically
             if is_consistent == "unknown":
                 lines = output.strip().split('\n')
                 for line in lines[:3]:
@@ -229,6 +233,7 @@ def query_consistency(prompt: str, model_config: dict) -> dict:
                         is_consistent = 'no'
                         break
 
+        # Extract reasoning (everything after the first word)
         reasoning = ' '.join(output.split()[1:]) if len(output.split()) > 1 else "No reasoning provided"
 
         return {
@@ -236,6 +241,48 @@ def query_consistency(prompt: str, model_config: dict) -> dict:
             "reasoning": reasoning,
             "raw_output": output
         }
+
+    #     output = response.choices[0].message.content.strip()
+    #     is_consistent = "unknown"
+
+    #     if output:
+    #         patterns = [
+    #             r'Answer:\s*(yes|no)\s*$',
+    #             r'Answer:\s*(yes|no)[\s\.]',
+    #             r'^Answer:\s*(yes|no)\s*\n',
+    #             r'"Answer":\s*"(yes|no)"',
+    #         ]
+
+    #         for pattern in patterns:
+    #             match = re.search(pattern, output, re.IGNORECASE | re.MULTILINE)
+    #             if match:
+    #                 is_consistent = match.group(1).lower()
+    #                 break 
+
+    #         if is_consistent == "unknown":
+    #             lines = output.strip().split('\n')
+    #             for line in lines[:3]:
+    #                 line_lower = line.lower().strip()
+    #                 if line_lower.startswith('yes'):
+    #                     is_consistent = 'yes'
+    #                     break
+    #                 elif line_lower.startswith('no'):
+    #                     is_consistent = 'no'
+    #                     break
+    #                 elif 'yes' in line_lower and 'no' not in line_lower:
+    #                     is_consistent = 'yes'
+    #                     break
+    #                 elif 'no' in line_lower and 'yes' not in line_lower:
+    #                     is_consistent = 'no'
+    #                     break
+
+    #     reasoning = ' '.join(output.split()[1:]) if len(output.split()) > 1 else "No reasoning provided"
+
+    #     return {
+    #         "is_consistent": is_consistent,
+    #         "reasoning": reasoning,
+    #         "raw_output": output
+    #     }
 
         
     except Exception as e:
