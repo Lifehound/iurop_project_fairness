@@ -198,3 +198,10 @@ For issues and questions:
 - Ensure your API keys are properly configured
 - Verify dataset availability from Hugging Face
 
+## Citation
+If you use this tool in your research, please cite:
+@software{llm_bias_analyzer,
+  title = {LLM Bias Analysis Pipeline with BBQ Dataset},
+  author = {Emily Heugen},
+  year = {2025}
+
